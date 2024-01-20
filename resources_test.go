@@ -13,12 +13,11 @@ import (
 	"github.com/tidwall/gjson"
 )
 
-func TestMain2(t *testing.T) {
+func TestUpdate(t *testing.T) {
+	updateBefore()
 	url := "https://api.github.com/repos/baidu/amis/releases/latest"
-
 	req, _ := http.NewRequest("GET", url, nil)
 	client := &http.Client{}
-
 	resp, err := client.Do(req) // request remote
 	if err != nil {
 		t.Fatal(err)
@@ -33,9 +32,8 @@ func TestMain2(t *testing.T) {
 	sdkUrl := "https://github.com/baidu/amis/releases/download/%v/sdk.tar.gz"
 	schemaUrl := "https://github.com/baidu/amis/releases/download/%v/schema.json"
 
-	tarGzURL := fmt.Sprintf(sdkUrl, result.Get("tag_name").String()) // "https://example.com/path/to/your/file.tar.gz"
-	downloadDest := "sdk.tar.gz"
-	extractDest := fmt.Sprintf("asset/amis")
+	updateVersion(result.Get("tag_name").String())
+	tarGzURL := fmt.Sprintf(sdkUrl, result.Get("tag_name").String())
 
 	// 下载文件
 	err = downloadFile(tarGzURL, downloadDest)
@@ -50,7 +48,7 @@ func TestMain2(t *testing.T) {
 		fmt.Println("解压文件时出错:", err)
 		return
 	}
-	defer os.ReadFile(downloadDest)
+	defer os.Remove(downloadDest)
 
 	err = downloadFile(fmt.Sprintf(schemaUrl, result.Get("tag_name").String()), extractDest+"/schema.json")
 	if err != nil {
