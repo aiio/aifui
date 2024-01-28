@@ -1,0 +1,88 @@
+html,
+        body,
+        .app-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /*  自定义全局颜色*/
+            --color-1: #001259;
+            /* #001259 */
+            --color-2: #001e80;
+            /* #001e80 */
+            --color-3: #002B7C;
+            /* #0832a6 */
+            --color-4: #002B7C;
+            /* #144bcc */
+            --color-5: #0960bd;
+            /* #2468f2 */
+            --color-6: #0a6fdb;
+            /* #528eff */
+            --color-7: #528eff;
+            /* #7dadff */
+            --color-8: #7dadff;
+            /* #a8caff */
+            --color-9: #91c4fa;
+            /* #d4e5ff */
+            --color-10: #c2defc;
+            /* #e6f0ff */
+
+            /*左侧菜单*/
+            --Layout-aside-onAcitve-bg: var(--color-5);
+            /* 选中后 背景颜色 */
+            --Layout-asideLink-onActive-color: #fff;
+            /*  选中后 前景颜色（图标 文字） */
+            /*--Layout-asideLink-fontSize: var(--fonts-size-7); !*  文字大小 *!*/
+            --Layout-asideLink-onHover-iconColor: #fff;
+            /*  鼠标停留时 图标颜色 */
+            --Layout-asideLink-onHover-color: #fff;
+            /*  鼠标停留时 文字颜色 */
+
+            --colors-link-1: var(--color-1);
+            --colors-link-2: var(--color-2);
+            --colors-link-3: var(--color-3);
+            --colors-link-4: var(--color-4);
+            --colors-link-5: var(--color-5);
+            --colors-link-6: var(--color-6);
+            --colors-link-7: var(--color-7);
+            --colors-link-8: var(--color-8);
+            --colors-link-9: var(--color-9);
+            --colors-link-10: var(--color-10);
+
+            --colors-info-1: var(--color-1);
+            --colors-info-2: var(--color-2);
+            --colors-info-3: var(--color-3);
+            --colors-info-4: var(--color-4);
+            --colors-info-5: var(--color-5);
+            --colors-info-6: var(--color-6);
+            --colors-info-7: var(--color-7);
+            --colors-info-8: var(--color-8);
+            --colors-info-9: var(--color-9);
+            --colors-info-10: var(--color-10);
+
+            --colors-other-1: var(--color-1);
+            --colors-other-2: var(--color-2);
+            --colors-other-3: var(--color-3);
+            --colors-other-4: var(--color-4);
+            --colors-other-5: var(--color-5);
+            --colors-other-6: var(--color-6);
+            --colors-other-7: var(--color-7);
+            --colors-other-8: var(--color-8);
+            --colors-other-9: var(--color-9);
+            --colors-other-10: var(--color-10);
+
+            --colors-brand-1: var(--color-1);
+            --colors-brand-2: var(--color-2);
+            --colors-brand-3: var(--color-3);
+            --colors-brand-4: var(--color-4);
+            --colors-brand-5: var(--color-5);
+            --colors-brand-6: var(--color-6);
+            --colors-brand-7: var(--color-7);
+            --colors-brand-8: var(--color-8);
+            --colors-brand-9: var(--color-9);
+            --colors-brand-10: var(--color-10);
+        }
