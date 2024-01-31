@@ -43,7 +43,7 @@ func TestUpdate(t *testing.T) {
 	}
 
 	// 解压文件到目标目录
-	err = extractTarGz(downloadDest, extractDest)
+	err = extractTarGz(downloadDest, extractDest+"/sdk")
 	if err != nil {
 		fmt.Println("解压文件时出错:", err)
 		return
