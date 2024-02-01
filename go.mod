@@ -1,4 +1,4 @@
-module github.com/aiio/aifui
+module cnbattle.com/aifui
 
 go 1.16
 
